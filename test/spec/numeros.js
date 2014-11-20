@@ -14,12 +14,8 @@ define(['numeros'],function(numeros){
 			});
 			it('whatever2', function(){
 				
-			});			
-		});
+			});	
 
-
-		describe('metodo adicionar',function(){
-			
 			it('this is how you make a pending test', function(){
 				pending();
 			});
@@ -27,8 +23,26 @@ define(['numeros'],function(numeros){
 				
 			});
 
+		});
+
+
+		describe('metodo adicionar',function(){
+			
+			
+
 			it('should accept one or more args and return the sum them', function(){
-				pending();
+				
+				//arrange
+				var output,
+					input1=1,
+					input2=2;
+				
+				//act	
+				output = numeros.add(input1,input2);
+
+				//assert
+				expect(output).toEqual(3);
+				expect(output).not.toEqual(4);
 			});
 			
 		});

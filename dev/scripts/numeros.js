@@ -3,7 +3,10 @@ define(function(){
 	'use strict';
 
 	var self = {};
-	console.log('numeros');
-	return self;
+	
+	self.add=function add(){
 
+	};
+
+	return self;
 });
