@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v2.0.0</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.1.2/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-2.1.2/jasmine.css">
+
+<!-- como estamos a user REQUIRE JS, este tem que ser carregado primeiro  -->
+  <script src="../dev/lib/require.js"></script>
+ <!-- depois temos que adicionar configuração para que requireJS porque os modulos de testes -->
+    <!-- estão em directorias diferentes dos proprios modulos... tambem permite envitar que tenhamos que -->
+    <!-- escrever paths longos para os modulos a testar.... VER A CONFIG em <body>  -->
+
+
+
+  <script src="lib/jasmine-2.1.2/jasmine.js"></script>
+  <script src="lib/jasmine-2.1.2/jasmine-html.js"></script>
+  <script src="lib/jasmine-2.1.2/boot.js"></script>
+
+  <!-- include source files here... -->
+    <!--
+	<script src="src/Player.js"></script>
+  	<script src="src/Song.js"></script> 
+	
+	<script src="src/olaMundoWhatever.js"></script> 
+  --> 
+  <!-- include spec files here... 
+	<script src="spec/olaMundoSpec.js"></script>
+-->
+
+<!--
+  <script src="spec/SpecHelper.js"></script>
+  <script src="spec/PlayerSpec.js"></script>
+-->
+
+<!--  -->
+
+
+
+</head>
+
+<body>
+  <script>
+    require({
+      baseUrl:'../dev/scripts',  //paths dos modulos a serem testados
+      paths: {
+        spec: '../../test/spec'
+      }
+    },['spec/numeros'],function(){
+      jasmine.getEnv().execute(); //here we run the tests when requireJS is ready (for that we do the comment in image commentLine.png)
+    });
+  </script>
+
+
+</body>
+</html>
